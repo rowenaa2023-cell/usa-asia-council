@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate & Support | USA-ASIA Council Foreign Policy Partnership</title>
+    <!-- Google Fonts: Oswald, Inter & Merriweather -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&family=Merriweather:wght@300;400;700;900&family=Oswald:wght@600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Header with USA-ASIA Council Official Logo -->
+    <header class="council-site-header">
+        <div class="council-header-inner">
+            <a href="index.html" class="council-logo-link">
+                <img src="assets/logo.png" alt="USA Asia Foreign Policy Partnership Council" class="council-nav-logo-img">
+            </a>
+            
+            <nav class="council-nav-menu">
+                <ul class="council-nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="us-pakistan-relationship.html">U.S. Pak Relationship</a></li>
+                    <li><a href="us-saudi-arabia-relationship.html">U.S. Saudi Arabia Relationship</a></li>
+                    <li><a href="issues.html">Our Missions</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="donate.html" class="active">Support</a></li>
+                    <li><a href="about.html">Contact</a></li>
+                </ul>
+                <a href="donate.html" class="btn-council-donate-pill">Donate</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="donate-page-section">
+        <div class="donate-container">
+            
+            <!-- Top Headline Requested by User -->
+            <h1 class="donate-page-headline">DONATE</h1>
+            <div class="donate-red-bar"></div>
+
+            <!-- Introductory Policy Text (Matches uploaded screenshot) -->
+            <p class="donate-intro-text">
+                USA-Asia Council Foreign Policy Partnership is a leading non-partisan diplomatic and trade policy advocacy organization. Together with our members, partners, and policymakers, we advance principled American engagement across Asia, champion mutually beneficial economic partnerships, and foster regional peace and stability. The USA-Asia Council community plays a central role in supporting sound policy, holding elected leaders accountable, and strengthening our diplomatic alliances.
+            </p>
+
+            <p class="donate-contact-text">
+                For questions, please contact <a href="mailto:info@usaasiacouncil.org">info@usaasiacouncil.org</a>.
+            </p>
+
+            <!-- FastAction Bar Row -->
+            <div class="fastaction-row">
+                <div class="fastaction-left">
+                    <span class="fastaction-tip">Take future action with a single click.</span>
+                    <span class="fastaction-links"><a href="#fastaction-login" id="linkFastActionLogin">Log in</a> or <a href="#fastaction-signup" id="linkFastActionSignup">Sign up</a> for <strong>FastAction</strong></span>
+                </div>
+                
+                <div class="fastaction-badge">
+                    <i class="ph ph-gear"></i>
+                    <span>fastaction</span>
+                    <span class="fastaction-help-icon" title="FastAction securely stores your contact and payment information for one-click advocacy and donations.">?</span>
+                </div>
+            </div>
+
+            <!-- 4-Step Wizard Navigation Bar -->
+            <div class="donate-wizard-steps">
+                <button type="button" class="donate-step-tab active" data-step="1">
+                    <span class="donate-step-num">1</span>
+                    <span>Amount</span>
+                </button>
+                <button type="button" class="donate-step-tab" data-step="2">
+                    <span class="donate-step-num">2</span>
+                    <span>Details</span>
+                </button>
+                <button type="button" class="donate-step-tab" data-step="3">
+                    <span class="donate-step-num">3</span>
+                    <span>Payment</span>
+                </button>
+                <button type="button" class="donate-step-tab" data-step="4">
+                    <span class="donate-step-num">4</span>
+                    <span>Finish</span>
+                </button>
+            </div>
+
+            <!-- Multi-Step Form Container -->
+            <form id="donationForm" onsubmit="return false;">
+
+                <!-- STEP 1: AMOUNT SELECTION (Exact match to screenshot) -->
+                <div class="donate-step-panel active" id="stepPanel1">
+                    
+                    <!-- 4-Column Grid of Amounts -->
+                    <div class="donate-amounts-grid">
+                        <!-- Row 1 -->
+                        <button type="button" class="donate-amount-btn selected" data-amount="20">$20</button>
+                        <button type="button" class="donate-amount-btn" data-amount="35">$35</button>
+                        <button type="button" class="donate-amount-btn" data-amount="50">$50</button>
+                        <button type="button" class="donate-amount-btn" data-amount="100">$100</button>
+
+                        <!-- Row 2 -->
+                        <button type="button" class="donate-amount-btn" data-amount="500">$500</button>
+                        <button type="button" class="donate-amount-btn" data-amount="1000">$1,000</button>
+                        <button type="button" class="donate-amount-btn" data-amount="2500">$2,500</button>
+                        <button type="button" class="donate-amount-btn" data-amount="5000">$5,000</button>
+
+                        <!-- Row 3 -->
+                        <button type="button" class="donate-amount-btn" data-amount="10000">$10,000</button>
+                        
+                        <!-- Custom Amount Input -->
+                        <div class="donate-custom-input-wrap">
+                            <input type="text" id="customAmountInput" class="donate-custom-input" placeholder="$ 0.00" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <!-- Contribution Checkbox Options -->
+                    <div class="donate-options-wrap">
+                        
+                        <!-- Checkbox 1: Recurring Contribution -->
+                        <div class="donate-checkbox-item">
+                            <label class="donate-checkbox-label">
+                                <input type="checkbox" id="checkRecurring" class="donate-checkbox-input">
+                                <span>Make this recurring contribution</span>
+                            </label>
+                            
+                            <select id="selectFrequency" class="donate-select-dropdown" style="display: none;">
+                                <option value="Monthly" selected>Monthly</option>
+                                <option value="Quarterly">Quarterly</option>
+                                <option value="Annually">Annually</option>
+                            </select>
+                        </div>
+
+                        <!-- Checkbox 2: Cover Transaction Fees -->
+                        <div class="donate-checkbox-item">
+                            <label class="donate-checkbox-label">
+                                <input type="checkbox" id="checkCoverFees" class="donate-checkbox-input">
+                                <span>I'd like to help cover the transaction fees for my donation</span>
+                            </label>
+                        </div>
+
+                        <!-- Checkbox 3: In Honor or In Memory -->
+                        <div class="donate-checkbox-item">
+                            <label class="donate-checkbox-label">
+                                <input type="checkbox" id="checkHonorMemory" class="donate-checkbox-input">
+                                <span>I'd like to make this contribution in honor or in memory of someone</span>
+                            </label>
+                            
+                            <div id="honorFieldsWrap" style="display: none; margin-top: 10px; margin-left: 26px;">
+                                <input type="text" id="honorNameInput" class="donate-form-input" placeholder="Honoree Full Name" style="max-width: 380px;">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Step 1 Bottom Action Row (Next Button) -->
+                    <div class="donate-bottom-actions">
+                        <button type="button" class="btn-donate-nav btn-donate-primary" id="btnStep1Next">Next</button>
+                    </div>
+
+                </div>
+
+                <!-- STEP 2: DONOR DETAILS -->
+                <div class="donate-step-panel" id="stepPanel2">
+                    <h3 style="font-family:'Oswald',sans-serif; font-size:22px; color:#0c2340; text-transform:uppercase; margin-bottom:18px;">
+                        Donor Information
+                    </h3>
+                    
+                    <div class="donate-form-grid">
+                        <div class="donate-form-group">
+                            <label class="donate-form-label" for="donorFirstName">First Name *</label>
+                            <input type="text" id="donorFirstName" class="donate-form-input" placeholder="First Name" required>
+                        </div>
+                        <div class="donate-form-group">
+                            <label class="donate-form-label" for="donorLastName">Last Name *</label>
+                            <input type="text" id="donorLastName" class="donate-form-input" placeholder="Last Name" required>
+                        </div>
+                        <div class="donate-form-group full-width">
+                            <label class="donate-form-label" for="donorEmail">Email Address *</label>
+                            <input type="email" id="donorEmail" class="donate-form-input" placeholder="name@example.com" required>
+                        </div>
+                        <div class="donate-form-group full-width">
+                            <label class="donate-form-label" for="donorAddress">Street Address *</label>
+                            <input type="text" id="donorAddress" class="donate-form-input" placeholder="123 Constitution Ave NW" required>
+                        </div>
+                        <div class="donate-form-group">
+                            <label class="donate-form-label" for="donorCity">City *</label>
+                            <input type="text" id="donorCity" class="donate-form-input" placeholder="Washington" required>
+                        </div>
+                        <div class="donate-form-group">
+                            <label class="donate-form-label" for="donorState">State / Region *</label>
+                            <input type="text" id="donorState" class="donate-form-input" placeholder="DC" required>
+                        </div>
+                        <div class="donate-form-group">
+                            <label class="donate-form-label" for="donorZip">Postal / ZIP Code *</label>
+                            <input type="text" id="donorZip" class="donate-form-input" placeholder="20001" required>
+                        </div>
+                        <div class="donate-form-group">
+                            <label class="donate-form-label" for="donorOccupation">Occupation</label>
+                            <input type="text" id="donorOccupation" class="donate-form-input" placeholder="Policy Analyst / Consultant">
+                        </div>
+                    </div>
+
+                    <div class="donate-bottom-actions">
+                        <button type="button" class="btn-donate-nav btn-donate-secondary" id="btnStep2Back">Back</button>
+                        <button type="button" class="btn-donate-nav btn-donate-primary" id="btnStep2Next">Continue to Payment</button>
+                    </div>
+                </div>
+
+                <!-- STEP 3: PAYMENT METHOD -->
+                <div class="donate-step-panel" id="stepPanel3">
+                    <h3 style="font-family:'Oswald',sans-serif; font-size:22px; color:#0c2340; text-transform:uppercase; margin-bottom:18px;">
+                        Payment Method
+                    </h3>
+
+                    <!-- Order / Donation Summary Pill -->
+                    <div class="donate-summary-pill">
+                        <div>
+                            <span style="font-size:12px; font-weight:700; color:#64748b; text-transform:uppercase; letter-spacing:0.5px; display:block;">Total Contribution</span>
+                            <span id="summaryFrequencyText" style="font-size:13.5px; color:#1e3a5f; font-weight:600;">One-time donation</span>
+                        </div>
+                        <div class="donate-summary-amount" id="summaryAmountText">$20.00</div>
+                    </div>
+
+                    <!-- Payment Fields -->
+                    <div class="donate-form-grid">
+                        <div class="donate-form-group full-width">
+                            <label class="donate-form-label" for="cardHolderName">Name on Card *</label>
+                            <input type="text" id="cardHolderName" class="donate-form-input" placeholder="John Doe" required>
+                        </div>
+                        <div class="donate-form-group full-width">
+                            <label class="donate-form-label" for="cardNumber">Card Number *</label>
+                            <input type="text" id="cardNumber" class="donate-form-input" placeholder="•••• •••• •••• ••••" maxlength="19" required>
+                        </div>
+                        <div class="donate-form-group">
+                            <label class="donate-form-label" for="cardExp">Expiration (MM/YY) *</label>
+                            <input type="text" id="cardExp" class="donate-form-input" placeholder="MM/YY" maxlength="5" required>
+                        </div>
+                        <div class="donate-form-group">
+                            <label class="donate-form-label" for="cardCvc">Security Code (CVC) *</label>
+                            <input type="text" id="cardCvc" class="donate-form-input" placeholder="CVC" maxlength="4" required>
+                        </div>
+                    </div>
+
+                    <!-- Security Verification Badges -->
+                    <div class="payment-security-badges">
+                        <i class="ph ph-lock-key" style="font-size: 20px; color:#22c55e;"></i>
+                        <span>256-Bit SSL Bank-Grade Encryption &middot; FastAction Verified &middot; 501(c)(4) Advocacy Non-Profit</span>
+                    </div>
+
+                    <div class="donate-bottom-actions">
+                        <button type="button" class="btn-donate-nav btn-donate-secondary" id="btnStep3Back">Back</button>
+                        <button type="button" class="btn-donate-nav btn-donate-primary" id="btnStep3Complete">Submit Contribution</button>
+                    </div>
+                </div>
+
+                <!-- STEP 4: FINISH & TAX RECEIPT -->
+                <div class="donate-step-panel" id="stepPanel4">
+                    <div class="donate-finish-card">
+                        <div class="donate-finish-icon">
+                            <i class="ph ph-check"></i>
+                        </div>
+                        <h2 class="donate-finish-title">Thank You For Your Support!</h2>
+                        <p class="donate-finish-desc">
+                            Your generous contribution powers our mission to build a more secure, just, and prosperous world by championing principled diplomacy and transparent USA-Asia strategic partnerships.
+                        </p>
+
+                        <!-- Formal Confirmation / Receipt Box -->
+                        <div class="donate-receipt-box">
+                            <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                                <span style="color:#64748b;">Confirmation #:</span>
+                                <strong id="receiptConfirmNo" style="font-family:monospace; color:#0c2340;">UAC-89421</strong>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                                <span style="color:#64748b;">Amount:</span>
+                                <strong id="receiptAmount" style="color:#27ae60; font-size:16px;">$20.00</strong>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                                <span style="color:#64748b;">Schedule:</span>
+                                <strong id="receiptSchedule">One-time Contribution</strong>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                                <span style="color:#64748b;">Date:</span>
+                                <span id="receiptDate">October 14, 2026</span>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; padding-top:8px; border-top:1px dashed #cbd5e1; font-size:12px; color:#64748b;">
+                                <span>Official Organization:</span>
+                                <span>USA-ASIA Council Foreign Policy Partnership</span>
+                            </div>
+                        </div>
+
+                        <div style="display:inline-flex; gap:14px; flex-wrap:wrap; justify-content:center;">
+                            <a href="index.html" class="btn-donate-nav btn-donate-primary" style="text-decoration:none; display:inline-block;">
+                                Return to Home
+                            </a>
+                            <button type="button" class="btn-donate-nav btn-donate-secondary" onclick="window.print();">
+                                <i class="ph ph-printer"></i> Print Receipt
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </main>
+
+    <!-- Council Standard Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo-container footer-logo">
+                        <div class="logo-top">USA-ASIA COUNCIL</div>
+                        <div class="logo-bottom">
+                            <div class="logo-bottom-text">FOREIGN POLICY</div>
+                            <div class="logo-red-line"></div>
+                        </div>
+                    </div>
+                    <p class="footer-desc">A non-partisan think-tank dedicated to strengthening the strategic, economic, and diplomatic ties between the United States and the nations of Asia.</p>
+                    <p>
+                        USA-ASIA Council<br>
+                        Washington, DC<br>
+                        <a href="mailto:info@usaasiacouncil.org" style="color: var(--color-accent-gold);">info@usaasiacouncil.org</a>
+                    </p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Initiatives</h4>
+                    <ul class="footer-links">
+                        <li><a href="intermestic.html">Intermestic Policy</a></li>
+                        <li><a href="nextgen.html">NextGen Leaders</a></li>
+                        <li><a href="briefs.html">Policy Briefs</a></li>
+                        <li><a href="events.html">Global Summits</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Organization</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Stay Informed</h4>
+                    <p style="margin-bottom: 15px;">Subscribe to our newsletter for the latest diplomatic briefs and summit invitations.</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Email Address" required>
+                        <button type="submit" class="newsletter-btn">SUBSCRIBE</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 USA-ASIA Council Foreign Policy Partnership. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Donation Wizard Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let currentStep = 1;
+            let selectedAmount = 20;
+            let isRecurring = false;
+            let recurringFrequency = 'Monthly';
+            let coverFees = false;
+
+            const amountBtns = document.querySelectorAll('.donate-amount-btn');
+            const customInput = document.getElementById('customAmountInput');
+            const checkRecurring = document.getElementById('checkRecurring');
+            const selectFrequency = document.getElementById('selectFrequency');
+            const checkCoverFees = document.getElementById('checkCoverFees');
+            const checkHonorMemory = document.getElementById('checkHonorMemory');
+            const honorFieldsWrap = document.getElementById('honorFieldsWrap');
+            
+            const stepTabs = document.querySelectorAll('.donate-step-tab');
+            const stepPanels = document.querySelectorAll('.donate-step-panel');
+
+            // Preset Amount Buttons Click
+            amountBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    amountBtns.forEach(b => b.classList.remove('selected'));
+                    this.classList.add('selected');
+                    selectedAmount = parseFloat(this.getAttribute('data-amount'));
+                    customInput.value = '';
+                    updateSummary();
+                });
+            });
+
+            // Custom Amount Input
+            customInput.addEventListener('focus', function() {
+                amountBtns.forEach(b => b.classList.remove('selected'));
+            });
+
+            customInput.addEventListener('input', function() {
+                amountBtns.forEach(b => b.classList.remove('selected'));
+                let raw = this.value.replace(/[^0-9.]/g, '');
+                let parsed = parseFloat(raw);
+                if (!isNaN(parsed) && parsed > 0) {
+                    selectedAmount = parsed;
+                } else {
+                    selectedAmount = 0;
+                }
+                updateSummary();
+            });
+
+            // Recurring Checkbox Toggle
+            checkRecurring.addEventListener('change', function() {
+                isRecurring = this.checked;
+                selectFrequency.style.display = this.checked ? 'block' : 'none';
+                updateSummary();
+            });
+
+            selectFrequency.addEventListener('change', function() {
+                recurringFrequency = this.value;
+                updateSummary();
+            });
+
+            // Cover Fees Checkbox
+            checkCoverFees.addEventListener('change', function() {
+                coverFees = this.checked;
+                updateSummary();
+            });
+
+            // Honor / Memorial Checkbox
+            checkHonorMemory.addEventListener('change', function() {
+                honorFieldsWrap.style.display = this.checked ? 'block' : 'none';
+            });
+
+            // Calculate final total with optional processing fee
+            function getFinalAmount() {
+                let base = selectedAmount > 0 ? selectedAmount : 20;
+                if (coverFees) {
+                    return (base * 1.03);
+                }
+                return base;
+            }
+
+            function updateSummary() {
+                let finalVal = getFinalAmount();
+                let formatted = '$' + finalVal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+                
+                const summaryAmount = document.getElementById('summaryAmountText');
+                const summaryFreq = document.getElementById('summaryFrequencyText');
+                
+                if (summaryAmount) summaryAmount.textContent = formatted;
+                if (summaryFreq) {
+                    summaryFreq.textContent = isRecurring 
+                        ? `${recurringFrequency} recurring contribution` 
+                        : 'One-time contribution';
+                }
+            }
+
+            // Step Navigation Logic
+            function goToStep(stepNum) {
+                if (stepNum < 1 || stepNum > 4) return;
+                currentStep = stepNum;
+
+                // Update Step Tabs
+                stepTabs.forEach(tab => {
+                    let s = parseInt(tab.getAttribute('data-step'));
+                    tab.classList.remove('active');
+                    if (s === currentStep) {
+                        tab.classList.add('active');
+                    }
+                    if (s < currentStep) {
+                        tab.classList.add('completed');
+                    } else {
+                        tab.classList.remove('completed');
+                    }
+                });
+
+                // Update Panels
+                stepPanels.forEach(p => p.classList.remove('active'));
+                const targetPanel = document.getElementById(`stepPanel${currentStep}`);
+                if (targetPanel) targetPanel.classList.add('active');
+
+                // Update summary when entering step 3
+                if (currentStep === 3) {
+                    updateSummary();
+                }
+
+                // Populate Receipt on Step 4
+                if (currentStep === 4) {
+                    let finalVal = getFinalAmount();
+                    document.getElementById('receiptAmount').textContent = '$' + finalVal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+                    document.getElementById('receiptSchedule').textContent = isRecurring 
+                        ? `${recurringFrequency} Recurring Contribution` 
+                        : 'One-time Contribution';
+                    document.getElementById('receiptConfirmNo').textContent = 'UAC-' + Math.floor(100000 + Math.random() * 900000);
+                    
+                    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                    document.getElementById('receiptDate').textContent = new Date().toLocaleDateString('en-US', options);
+                }
+
+                window.scrollTo({ top: 120, behavior: 'smooth' });
+            }
+
+            // Step 1 -> Step 2
+            document.getElementById('btnStep1Next').addEventListener('click', function() {
+                if (selectedAmount <= 0) {
+                    alert('Please select or enter a valid donation amount.');
+                    return;
+                }
+                goToStep(2);
+            });
+
+            // Step 2 -> Back or Next
+            document.getElementById('btnStep2Back').addEventListener('click', function() {
+                goToStep(1);
+            });
+
+            document.getElementById('btnStep2Next').addEventListener('click', function() {
+                const fname = document.getElementById('donorFirstName').value.trim();
+                const lname = document.getElementById('donorLastName').value.trim();
+                const email = document.getElementById('donorEmail').value.trim();
+                
+                if (!fname || !lname || !email) {
+                    if (!fname) document.getElementById('donorFirstName').value = "Supporter";
+                    if (!lname) document.getElementById('donorLastName').value = "Advocate";
+                    if (!email) document.getElementById('donorEmail').value = "supporter@usaasiacouncil.org";
+                }
+                goToStep(3);
+            });
+
+            // Step 3 -> Back or Submit
+            document.getElementById('btnStep3Back').addEventListener('click', function() {
+                goToStep(2);
+            });
+
+            document.getElementById('btnStep3Complete').addEventListener('click', function() {
+                const btn = this;
+                btn.innerHTML = '<i class="ph ph-spinner ph-spin"></i> Processing Securely...';
+                btn.disabled = true;
+
+                setTimeout(function() {
+                    btn.innerHTML = 'Submit Contribution';
+                    btn.disabled = false;
+                    goToStep(4);
+                }, 900);
+            });
+
+            // Allow clicking step tabs for steps previously visited
+            stepTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    let target = parseInt(this.getAttribute('data-step'));
+                    if (target <= currentStep || target === 2) {
+                        goToStep(target);
+                    }
+                });
+            });
+
+            // Card formatting helper
+            const cardInput = document.getElementById('cardNumber');
+            if (cardInput) {
+                cardInput.addEventListener('input', function(e) {
+                    let val = this.value.replace(/\D/g, '').substring(0, 16);
+                    let formatted = val.match(/.{1,4}/g)?.join(' ') || val;
+                    this.value = formatted;
+                });
+            }
+
+            const expInput = document.getElementById('cardExp');
+            if (expInput) {
+                expInput.addEventListener('input', function(e) {
+                    let val = this.value.replace(/\D/g, '').substring(0, 4);
+                    if (val.length >= 2) {
+                        this.value = val.substring(0, 2) + '/' + val.substring(2);
+                    } else {
+                        this.value = val;
+                    }
+                });
+            }
+
+            updateSummary();
+        });
+    </script>
+</body>
+</html>
