@@ -690,6 +690,9 @@ function generateEventHtml(evt) {
                 </ul>
                 <a href="donate.html" class="btn-council-donate-pill">Donate</a>
             </nav>
+            <button class="council-mobile-toggle" aria-label="Toggle Navigation Menu">
+                <i class="ph ph-list"></i>
+            </button>
         </div>
     </header>
 
@@ -732,7 +735,7 @@ function generateEventHtml(evt) {
 
             <!-- Primary High-Resolution Real Hero Image (Complete, Uncropped Display) -->
             <figure style="margin: 0 0 40px 0; background: #08162b; border-radius: 8px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.12); display: flex; flex-direction: column;">
-                <div style="width: 100%; height: 500px; display: flex; align-items: center; justify-content: center; background: #08162b; padding: 12px;">
+                <div class="event-primary-hero-frame" style="width: 100%; height: 500px; display: flex; align-items: center; justify-content: center; background: #08162b; padding: 12px;">
                     <img src="${evt.primaryImg}" alt="${evt.primaryAlt}" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block; border-radius: 4px;">
                 </div>
                 <figcaption style="font-family:'Inter', sans-serif; font-size: 13px; color: #cbd5e1; padding: 12px 20px; background: #0c2340; border-top: 1px solid rgba(255,255,255,0.08); font-style: italic;">
@@ -753,9 +756,9 @@ function generateEventHtml(evt) {
             </section>
 
             <!-- 2-Column Photo Gallery (Complete, Uncropped Display - No Cut Faces) -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 45px;">
+            <div class="event-gallery-grid" style="display: grid; gap: 24px; margin-bottom: 45px;">
                 <figure style="margin: 0; background: #08162b; border-radius: 8px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.08); display: flex; flex-direction: column;">
-                    <div style="width: 100%; height: 380px; display: flex; align-items: center; justify-content: center; background: #08162b; padding: 10px;">
+                    <div class="event-gallery-frame" style="width: 100%; height: 380px; display: flex; align-items: center; justify-content: center; background: #08162b; padding: 10px;">
                         <img src="${evt.gallery1}" alt="${evt.gallery1Alt}" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block; border-radius: 4px;">
                     </div>
                     <figcaption style="font-family:'Inter', sans-serif; font-size: 12px; color: #cbd5e1; padding: 12px 16px; background: #0c2340; border-top: 1px solid rgba(255,255,255,0.08); line-height: 1.4;">
@@ -763,7 +766,7 @@ function generateEventHtml(evt) {
                     </figcaption>
                 </figure>
                 <figure style="margin: 0; background: #08162b; border-radius: 8px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.08); display: flex; flex-direction: column;">
-                    <div style="width: 100%; height: 380px; display: flex; align-items: center; justify-content: center; background: #08162b; padding: 10px;">
+                    <div class="event-gallery-frame" style="width: 100%; height: 380px; display: flex; align-items: center; justify-content: center; background: #08162b; padding: 10px;">
                         <img src="${evt.gallery2}" alt="${evt.gallery2Alt}" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block; border-radius: 4px;">
                     </div>
                     <figcaption style="font-family:'Inter', sans-serif; font-size: 12px; color: #cbd5e1; padding: 12px 16px; background: #0c2340; border-top: 1px solid rgba(255,255,255,0.08); line-height: 1.4;">
@@ -856,6 +859,7 @@ function generateEventHtml(evt) {
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>`;
 }
@@ -927,6 +931,9 @@ const eventsPageHtml = `<!DOCTYPE html>
                 </ul>
                 <a href="donate.html" class="btn-council-donate-pill">Donate</a>
             </nav>
+            <button class="council-mobile-toggle" aria-label="Toggle Navigation Menu">
+                <i class="ph ph-list"></i>
+            </button>
         </div>
     </header>
 
@@ -1100,6 +1107,7 @@ const eventsPageHtml = `<!DOCTYPE html>
             });
         });
     </script>
+    <script src="script.js"></script>
 </body>
 </html>`;
 

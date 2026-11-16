@@ -1,5 +1,54 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Mobile Menu Toggle
+    // 1. Mobile Menu Toggle for Council Site Header
+    const councilHeader = document.querySelector('.council-site-header');
+    if (councilHeader) {
+        let councilToggle = councilHeader.querySelector('.council-mobile-toggle');
+        const headerInner = councilHeader.querySelector('.council-header-inner');
+        
+        // Auto-inject hamburger button if not present in markup
+        if (!councilToggle && headerInner) {
+            councilToggle = document.createElement('button');
+            councilToggle.className = 'council-mobile-toggle';
+            councilToggle.setAttribute('aria-label', 'Toggle Navigation Menu');
+            councilToggle.innerHTML = '<i class="ph ph-list"></i>';
+            headerInner.appendChild(councilToggle);
+        }
+
+        if (councilToggle) {
+            councilToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                councilHeader.classList.toggle('menu-open');
+                const icon = councilToggle.querySelector('i');
+                if (icon) {
+                    if (councilHeader.classList.contains('menu-open')) {
+                        icon.className = 'ph ph-x';
+                    } else {
+                        icon.className = 'ph ph-list';
+                    }
+                }
+            });
+
+            // Close menu when clicking any nav link
+            councilHeader.querySelectorAll('.council-nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    councilHeader.classList.remove('menu-open');
+                    const icon = councilToggle.querySelector('i');
+                    if (icon) icon.className = 'ph ph-list';
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!councilHeader.contains(e.target)) {
+                    councilHeader.classList.remove('menu-open');
+                    const icon = councilToggle.querySelector('i');
+                    if (icon) icon.className = 'ph ph-list';
+                }
+            });
+        }
+    }
+
+    // Legacy Mobile Menu Toggle (fallback)
     const menuToggle = document.querySelector('.mobile-menu-toggle');
     const mainNav = document.querySelector('.main-nav');
     

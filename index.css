@@ -1785,9 +1785,6 @@ ul {
         height: 290px;
         border-radius: 25px;
     }
-    .council-nav-links {
-        display: none;
-    }
 }
 
 /* ==========================================================================
@@ -2721,3 +2718,197 @@ ul {
         grid-column: span 1;
     }
 }
+
+/* ==========================================================================
+   Comprehensive Mobile & Tablet Responsive Enhancements (All Viewports)
+   ========================================================================== */
+
+/* Prevent horizontal overflow across all pages */
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+/* Mobile Navigation Toggle Button */
+.council-mobile-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    color: #0a2540;
+    font-size: 28px;
+    line-height: 1;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.council-mobile-toggle:hover {
+    color: #0080d7;
+}
+
+.council-mobile-toggle:active {
+    transform: scale(0.92);
+}
+
+/* Tablets & Mobile Navigation (< 992px) */
+@media (max-width: 992px) {
+    .council-header-inner {
+        position: relative;
+    }
+
+    .council-mobile-toggle {
+        display: flex;
+        order: 3;
+    }
+
+    .council-nav-menu {
+        gap: 16px;
+    }
+
+    .btn-council-donate-pill {
+        order: 2;
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+
+    .council-nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 16px 24px 24px 24px;
+        box-shadow: 0 16px 36px rgba(10, 37, 64, 0.12);
+        border-top: 1px solid #f1f5f9;
+        border-bottom: 4px solid #be1823;
+        gap: 4px;
+        z-index: 1001;
+    }
+
+    .council-site-header.menu-open .council-nav-links {
+        display: flex;
+        animation: mobileMenuFadeDown 0.25s ease-out forwards;
+    }
+
+    .council-nav-links li {
+        width: 100%;
+        list-style: none;
+    }
+
+    .council-nav-links a {
+        display: block;
+        padding: 10px 6px;
+        font-size: 15px;
+        font-weight: 600;
+        color: #0c2340;
+        border-bottom: 1px solid #f1f5f9;
+        transition: all 0.2s ease;
+    }
+
+    .council-nav-links a:hover,
+    .council-nav-links a.active {
+        color: #be1823;
+        padding-left: 10px;
+        background-color: #f8fafc;
+    }
+}
+
+@keyframes mobileMenuFadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Compact Header & Component Scaling on Mobile (<= 640px) */
+@media (max-width: 640px) {
+    .council-header-inner {
+        padding: 8px 16px;
+    }
+
+    .council-nav-logo-img {
+        height: 52px;
+        max-height: 56px;
+    }
+
+    .btn-council-donate-pill {
+        padding: 7px 14px;
+        font-size: 13px;
+        border-radius: 6px;
+    }
+
+    .council-mobile-toggle {
+        font-size: 26px;
+        padding: 4px;
+    }
+
+    .fp-hero-giant-word {
+        font-size: clamp(48px, 13vw, 90px) !important;
+        line-height: 0.95;
+        word-break: break-word;
+    }
+
+    .events-hero-img-frame {
+        height: 260px !important;
+    }
+
+    .event-tile-card {
+        height: 320px !important;
+    }
+
+    .event-primary-hero-frame {
+        height: 280px !important;
+        padding: 8px !important;
+    }
+
+    .event-gallery-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    .event-gallery-frame {
+        height: 260px !important;
+    }
+
+    .leadership-board-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    .issue-two-col-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    .issue-two-col-grid img {
+        height: 240px !important;
+    }
+
+    .council-hero-actions {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 10px !important;
+    }
+
+    .council-hero-actions a {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .council-floating-badge {
+        left: 10px !important;
+        right: 10px !important;
+        bottom: 10px !important;
+        padding: 6px 12px !important;
+        font-size: 11px !important;
+    }
+}
+
