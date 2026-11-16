@@ -1453,17 +1453,17 @@ ul {
 }
 
 .council-nav-logo-img {
-    height: 76px;
-    max-height: 82px;
-    width: auto;
+    height: 72px;
+    max-height: 76px;
+    width: 72px;
     object-fit: contain;
     display: block;
-    border-radius: 6px;
+    border-radius: 50%;
     transition: transform 0.25s ease;
 }
 
 .council-logo-link:hover .council-nav-logo-img {
-    transform: scale(1.02);
+    transform: scale(1.05);
 }
 
 .council-nav-menu {
@@ -2837,6 +2837,8 @@ html, body {
     .council-nav-logo-img {
         height: 52px;
         max-height: 56px;
+        width: 52px;
+        border-radius: 50%;
     }
 
     .btn-council-donate-pill {

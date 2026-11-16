@@ -666,6 +666,8 @@ function generateEventHtml(evt) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&family=Merriweather:wght@300;400;700;900&family=Oswald:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="index.css">
 </head>
@@ -681,8 +683,6 @@ function generateEventHtml(evt) {
             <nav class="council-nav-menu">
                 <ul class="council-nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="us-pakistan-relationship.html">U.S. Pak Relationship</a></li>
-                    <li><a href="us-saudi-arabia-relationship.html">U.S. Saudi Arabia Relationship</a></li>
                     <li><a href="issues.html">Our Missions</a></li>
                     <li><a href="events.html" class="active">Events</a></li>
                     <li><a href="support.html">Support</a></li>
@@ -909,6 +909,8 @@ const eventsPageHtml = `<!DOCTYPE html>
             color: #ffffff;
         }
     </style>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
 </head>
 <body>
 
@@ -922,8 +924,6 @@ const eventsPageHtml = `<!DOCTYPE html>
             <nav class="council-nav-menu">
                 <ul class="council-nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="us-pakistan-relationship.html">U.S. Pak Relationship</a></li>
-                    <li><a href="us-saudi-arabia-relationship.html">U.S. Saudi Arabia Relationship</a></li>
                     <li><a href="issues.html">Our Missions</a></li>
                     <li><a href="events.html" class="active">Events</a></li>
                     <li><a href="support.html">Support</a></li>
